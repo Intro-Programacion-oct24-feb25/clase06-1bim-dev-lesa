@@ -22,14 +22,14 @@ public class EjemploCadenas02 {
         System.out.println("Ingrese la ciudad");
         String ciudad = entrada.nextLine(); // Quito
         
-        
+        // String.format() permite acumular o actualizar los valores dentro de una cadena        
         cadenaFinal = String.format("%sCiudad:%s\n",
                 cadenaFinal, ciudad);
         // System.out.printf("%s\n", cadenaFinal);
         
         System.out.println("Ingrese la provincia");
         String provincia = entrada.nextLine(); // 
-        
+
         cadenaFinal = String.format("%sProvincia:%s\n",  
                 cadenaFinal,
                 provincia);
