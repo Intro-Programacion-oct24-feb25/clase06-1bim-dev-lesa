@@ -12,9 +12,13 @@ package manejocadenas;
 public class EjemploCadenas {
     public static void main(String[] args) {
         String ciudad = "loJa";
+        
+        //cambia todo a mayusculas
         ciudad = ciudad.toUpperCase();
+        //cambia todo a minusculas
         System.out.printf("%s\n", ciudad.toLowerCase());
         // System.out.printf("%s\n", ciudad.toUpperCase());
+        //imprime LOJA, no loja, pq no actualizamos o asignamos u nuveo valor a  ciudad, sino que en el print ponemos un caso
         System.out.printf("%s\n", ciudad);
         // toLowerCase es un método
         // toUpperCase es un método
