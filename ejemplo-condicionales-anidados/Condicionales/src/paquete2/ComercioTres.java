@@ -56,9 +56,28 @@ public class ComercioTres {
         System.out.println("ingrese el valor del porcentaje del seguro");
         porcentajeSeguro = entrada.nextDouble();
         
-        if (porcentajeSeguro < 1 || porcentajeSeguro >15){
+        // opción 1
+        if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
+            porcentajeSeguro = porcentajeSeguro + 0;
+        } else {
             porcentajeSeguro = 10;
         }
+
+        // opción 2
+        if (porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+
+         // opción 3
+        if (porcentajeSeguro < 1 || porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+
+        // opción 4
+        if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+        
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
         
