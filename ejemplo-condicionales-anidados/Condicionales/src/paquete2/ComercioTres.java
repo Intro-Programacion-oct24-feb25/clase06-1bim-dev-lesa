@@ -55,29 +55,40 @@ public class ComercioTres {
         
         System.out.println("ingrese el valor del porcentaje del seguro");
         porcentajeSeguro = entrada.nextDouble();
-        
+        /*
         // opción 1
         if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
             porcentajeSeguro = porcentajeSeguro + 0;
         } else {
             porcentajeSeguro = 10;
         }
-
+        /* SI FUNCIONA PORQUE PARA TODOS LOS VALORES DENTRO DEL RANGO ENTRE 1 Y 
+        15 INCLUYENDOLOS, DA EL MISMO VALOR Y CASO CONTRARIO, EN EL QUE NO ESTEN 
+        EN EL RANGO SE LE ASIGNA EL VALOR DE 10 */ 
+        /*
         // opción 2
         if (porcentajeSeguro > 15) {
             porcentajeSeguro = 10;
         }
+        /* NO FUNCIONA, PORQUE SI INGRESAMOS UN VALOR QUE SEA MENOR A 1 LO 
+         SEGUIRA TOMANDO COMO EL MISMO VALOR CUANDO DBERIA TOMARLO COMO 10 */
+        
 
          // opción 3
         if (porcentajeSeguro < 1 || porcentajeSeguro > 15) {
             porcentajeSeguro = 10;
         }
-
+        /* SI FUNCIONA PORQUE A TODOS LOS VALORES QUE SEAN MENORES A 1 Y MAYORES 
+        A 15 SE LE ASIGNA EL VALOR DE 10, CASO CONTRARIO COMO NO SE CUMPLE LA 
+        CONDICION, EL VALOR SIGUE SIENDO EL MISMO QUE SE INGRESÓ */
+            
+        /*
         // opción 4
         if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
             porcentajeSeguro = 10;
         }
-        
+        /* NO FUNCIONA, PORQUE SIEMPRE DARA FALSE Y NO SE CAMBIARA EL VALOR, 
+        POR LO QUE SE MANTENDRA EL VALOR INGRESADO POR TECLADO*/
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
         
