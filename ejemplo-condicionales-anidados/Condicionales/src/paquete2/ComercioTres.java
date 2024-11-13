@@ -1,6 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+    Existe una modificación en el proceso de la problematica, el porcentaje de 
+descuento del seguro será ingresado por teclado. Considerar los valores posibles 
+a ingresar son: entre 1 y 15, si la persona ingresa un valor fuera este rango el 
+valor de porcentaje va a ser 10
  */
 package paquete2;
 
@@ -11,7 +15,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Comercio {
+public class ComercioTres {
     
     public static void main(String[] args) {
         
@@ -26,9 +30,9 @@ public class Comercio {
         
         double productividad;
         double coeficiente = 0.6;
-        double bono  = 0;
+        double bono = 0;
         
-        double porcentajeSeguro = 8;
+        double porcentajeSeguro;
         double adicionalSeguro;
         
         double sueldoFinal; 
@@ -49,6 +53,12 @@ public class Comercio {
                 + "por favor");
         numeroProductos = entrada.nextInt();
         
+        System.out.println("ingrese el valor del porcentaje del seguro");
+        porcentajeSeguro = entrada.nextDouble();
+        
+        if (porcentajeSeguro < 1 || porcentajeSeguro >15){
+            porcentajeSeguro = 10;
+        }
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
         
@@ -68,7 +78,7 @@ public class Comercio {
             }
         }
         
-       
+ 
         adicionalSeguro = (sueldoBasico * porcentajeSeguro)/100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
