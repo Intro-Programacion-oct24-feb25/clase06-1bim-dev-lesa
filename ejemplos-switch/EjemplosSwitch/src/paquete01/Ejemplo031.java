@@ -33,9 +33,10 @@ public class Ejemplo031 {
         System.out.println("Ingrese la edad del estudiante");
         int edad = entrada.nextInt();
         
+        entrada.nextLine();
         System.out.println("Ingrese la Universidad del estudiante");
         String universidad = entrada.nextLine();
-        String inicial = nombre.substring(0, 1);
+        String inicial = nombre.toLowerCase();
         char inicial2 = inicial.charAt(0); 
     
         switch(inicial2){
