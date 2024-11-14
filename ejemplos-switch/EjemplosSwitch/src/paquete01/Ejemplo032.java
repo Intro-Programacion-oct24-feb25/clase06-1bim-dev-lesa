@@ -28,16 +28,18 @@ public class Ejemplo032 {
         System.out.println("Ingrese el nombre de una ciudad del Ecuador");
         String nombre = entrada.nextLine();
         nombre = nombre.toLowerCase();
+        
+        String inicialM = nombre.substring(0, 1);
         char valor = nombre.charAt(0);
-
+        
         switch(valor){
             case 'a':
             case'e':
             case 'i':
             case'o':
             case 'u':
-                System.out.printf("Nombre con inicial %s de %s\n", 
-                        valor, nombre.toLowerCase());
+                
+                System.out.printf("Nombre con inicial %s de %s\n", inicialM.toUpperCase(), nombre.toLowerCase());
                 break;
             
             default:
